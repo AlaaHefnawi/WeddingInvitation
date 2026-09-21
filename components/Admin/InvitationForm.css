@@ -1,0 +1,280 @@
+/* =========================================
+   INVITATION FORM
+========================================= */
+
+.invitation-form {
+  margin-bottom: 40px;
+
+  padding: 30px;
+
+  border: 1px solid #ddd0c2;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.invitation-form-header {
+  margin-bottom: 25px;
+}
+
+.invitation-form-small {
+  margin: 0 0 7px;
+
+  font-size: 9px;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+}
+
+.invitation-form-header h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+
+  color: #584d43;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.invitation-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.invitation-field-full {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   FIELDS
+========================================= */
+
+.invitation-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #82776b;
+}
+
+.invitation-field input {
+  width: 100%;
+
+  padding: 12px 5px;
+
+  border: none;
+
+  border-bottom: 1px solid #b9aa9c;
+
+  background: transparent;
+
+  color: #67584c;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.invitation-field input:focus {
+  border-color: #8f3f3f;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.invitation-form-error {
+  margin: 20px 0 0;
+
+  font-size: 12px;
+
+  color: #8f3f3f;
+}
+
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+.create-invitation-button {
+  margin-top: 30px;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  background: #67584c;
+
+  color: white;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.create-invitation-button:hover:not(:disabled) {
+  background: #8f3f3f;
+}
+
+.create-invitation-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   CREATED INVITATION
+========================================= */
+
+.created-invitation {
+  margin-top: 30px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #ddd0c2;
+}
+
+.created-invitation-small {
+  margin: 0 0 8px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #789078;
+}
+
+.created-invitation h3 {
+  margin: 0 0 18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  color: #584d43;
+}
+
+
+/* =========================================
+   LINK
+========================================= */
+
+.created-link {
+  display: flex;
+
+  gap: 10px;
+}
+
+.created-link input {
+  min-width: 0;
+  flex: 1;
+
+  padding: 11px 12px;
+
+  border: 1px solid #ddd0c2;
+
+  background: #fdfaf2;
+
+  color: #67584c;
+
+  font-size: 12px;
+
+  outline: none;
+}
+
+.created-link button {
+  padding: 11px 15px;
+
+  border: 1px solid #b9aa9c;
+
+  background: transparent;
+
+  color: #67584c;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.created-link button:hover {
+  background: #67584c;
+
+  border-color: #67584c;
+
+  color: white;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+  .invitation-form {
+    padding: 25px 20px;
+  }
+
+  .invitation-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .created-link {
+    flex-direction: column;
+  }
+
+  .created-link button {
+    width: 100%;
+  }
+
+}

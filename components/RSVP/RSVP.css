@@ -1,0 +1,1027 @@
+/* =========================================
+   RSVP SECTION
+========================================= */
+
+.rsvp {
+  min-height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 120px 25px;
+
+  background: #fdfaf2;
+
+  color: #4a423b;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rsvp-container {
+  width: min(90%, 650px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.rsvp-logo {
+  width: 90px;
+  height: 90px;
+
+  margin-bottom: 30px;
+
+  opacity: 0;
+
+  transform:
+    translateY(25px)
+    scale(0.95);
+}
+
+
+.rsvp-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.rsvp-small {
+  margin: 0 0 12px;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+}
+
+
+.rsvp-title {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(48px, 8vw, 70px);
+
+  font-weight: 400;
+
+  color: #584d43;
+
+  line-height: 1.1;
+
+  opacity: 0;
+
+  transform: translateY(25px);
+}
+
+
+.rsvp-message {
+  max-width: 420px;
+
+  margin: 25px 0 45px;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #756b61;
+
+  opacity: 0;
+
+  transform: translateY(25px);
+}
+
+
+/* =========================================
+   GUEST CARD
+========================================= */
+
+.guest-card {
+  width: 100%;
+
+  padding: 35px 30px;
+
+  margin-bottom: 45px;
+
+  border: 1px solid #ddd0c2;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  position: relative;
+
+  opacity: 0;
+
+  transform:
+    translateY(30px)
+    scale(0.98);
+}
+
+
+.guest-card::before,
+.guest-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 35px;
+  height: 35px;
+}
+
+
+.guest-card::before {
+  top: -1px;
+  left: -1px;
+
+  border-top: 1px solid #b9aa9c;
+  border-left: 1px solid #b9aa9c;
+}
+
+
+.guest-card::after {
+  bottom: -1px;
+  right: -1px;
+
+  border-bottom: 1px solid #b9aa9c;
+  border-right: 1px solid #b9aa9c;
+}
+
+
+.guest-label {
+  margin: 0 0 10px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+}
+
+
+/* =========================================
+   GUEST NAME
+========================================= */
+
+.guest-name {
+  position: relative;
+
+  margin: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  color: #67584c;
+
+  opacity: 0;
+
+  transform:
+    translateY(30px)
+    scale(0.97);
+}
+
+
+/* =========================================
+   MAIN GUEST NAME
+========================================= */
+
+.guest-name-main1 {
+  display: block;
+
+  font-size: 36px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   FAMILY
+========================================= */
+
+.guest-name-family {
+  display: block;
+
+  margin-top: 8px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  color: #9a8d80;
+}
+
+
+/* =========================================
+   LOADING / ERROR TEXT
+========================================= */
+
+.guest-number {
+  margin: 15px 0 0;
+
+  font-size: 14px;
+
+  color: #82776b;
+}
+
+
+/* =========================================
+   ATTENDANCE QUESTION
+========================================= */
+
+.rsvp-question {
+  width: 100%;
+}
+
+
+.rsvp-question > p {
+  margin: 0 0 25px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 22px;
+
+  color: #584d43;
+}
+
+
+/* =========================================
+   ATTENDANCE BUTTONS
+========================================= */
+
+.attendance-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  justify-content: center;
+}
+
+
+.attendance-buttons button {
+  padding: 14px 25px;
+
+  border: 1px solid #b9aa9c;
+
+  background: transparent;
+
+  color: #67584c;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.attendance-buttons button:hover:not(:disabled),
+.attendance-buttons button.active {
+  background: #8f3f3f;
+
+  border-color: #8f3f3f;
+
+  color: white;
+}
+
+
+.attendance-buttons button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   GUEST COUNTERS
+========================================= */
+
+.guest-counter {
+  width: 100%;
+
+  margin-top: 45px;
+}
+
+
+.guest-counter-title {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  color: #584d43;
+}
+
+
+.guest-counter-note {
+  margin: 8px 0 30px;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: #9a8d80;
+}
+
+
+/* =========================================
+   COUNTER ROW
+========================================= */
+
+.counter-row {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px 4px;
+
+  border-bottom: 1px solid #ddd0c2;
+}
+
+
+.counter-row:last-of-type {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   COUNTER LABEL
+========================================= */
+
+.counter-label {
+  display: flex;
+
+  align-items: center;
+}
+
+
+.counter-label span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 19px;
+
+  color: #67584c;
+}
+
+
+/* =========================================
+   COUNTER CONTROL
+========================================= */
+
+.counter {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 5px 7px;
+
+  border: 1px solid #d8cbc0;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  box-shadow:
+    0 4px 12px rgba(70, 50, 40, 0.04);
+}
+
+
+.counter-button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #67584c;
+
+  font-size: 20px;
+
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease,
+    opacity 0.3s ease;
+}
+
+
+.counter-button:hover:not(:disabled) {
+  background: #67584c;
+
+  color: white;
+
+  transform: scale(1.05);
+}
+
+
+.counter-button:disabled {
+  opacity: 0.3;
+
+  cursor: not-allowed;
+}
+
+
+.counter-number {
+  min-width: 24px;
+
+  text-align: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  color: #584d43;
+}
+
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.guest-counter-total {
+  margin: 22px 0 0;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  color: #a18f7f;
+}
+
+
+/* =========================================
+   SUBMIT
+========================================= */
+
+.submit-rsvp {
+  margin-top: 50px;
+
+  min-width: 190px;
+
+  padding: 15px 55px;
+
+  border: none;
+
+  background: #67584c;
+
+  color: white;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.submit-rsvp:hover:not(:disabled) {
+  background: #8f3f3f;
+}
+
+
+.submit-rsvp.submitting {
+  background: #a99d92;
+
+  opacity: 0.8;
+
+  cursor: wait;
+}
+
+
+.submit-rsvp:disabled {
+  cursor: wait;
+}
+
+
+/* =========================================
+   SUBMIT LOADING
+========================================= */
+
+.submit-loading {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+
+.loading-dots {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  margin-top: 2px;
+}
+
+
+.loading-dots span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+
+  animation:
+    loadingDot 1.2s ease-in-out infinite;
+}
+
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+
+@keyframes loadingDot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.25;
+
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+
+    transform: translateY(-3px);
+  }
+}
+
+
+/* =========================================
+   INITIAL ANIMATIONS
+========================================= */
+
+.rsvp.visible .rsvp-logo {
+  animation:
+    rsvpReveal 0.8s ease 0.1s forwards;
+}
+
+
+.rsvp.visible .rsvp-small {
+  animation:
+    rsvpReveal 0.8s ease 0.25s forwards;
+}
+
+
+.rsvp.visible .rsvp-title {
+  animation:
+    rsvpReveal 0.9s ease 0.4s forwards;
+}
+
+
+.rsvp.visible .rsvp-message {
+  animation:
+    rsvpReveal 0.8s ease 0.55s forwards;
+}
+
+
+.rsvp.visible .guest-card {
+  animation:
+    rsvpCardReveal 0.9s ease 0.7s forwards;
+}
+
+
+.rsvp.visible .guest-name {
+  animation:
+    guestReveal 1s ease 0.8s forwards;
+}
+
+
+@keyframes rsvpReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes rsvpCardReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes guestReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      scale(0.97);
+
+    letter-spacing: 8px;
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    letter-spacing: 3px;
+  }
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.rsvp-success {
+  min-height: 420px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  animation:
+    successReveal 1s ease forwards;
+}
+
+
+.success-logo {
+  width: 90px;
+  height: 90px;
+
+  margin-bottom: 30px;
+
+  animation:
+    successLogoReveal 1s ease 0.2s both;
+}
+
+
+.success-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+.success-small {
+  margin: 0 0 15px;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+}
+
+
+.rsvp-success h2 {
+  margin: 0 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(42px, 7vw, 64px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #584d43;
+}
+
+
+.rsvp-success p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #756b61;
+}
+
+
+@keyframes successReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes successLogoReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.85)
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+  .rsvp {
+    padding: 90px 20px;
+  }
+
+
+  .guest-card {
+    padding: 30px 20px;
+  }
+
+
+  .guest-name-main1 {
+    font-size: 30px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .guest-name-family {
+    margin-top: 6px;
+
+    font-size: 20px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .attendance-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .attendance-buttons button {
+    width: 100%;
+  }
+
+
+  .guest-counter-title {
+    font-size: 21px;
+  }
+
+
+  .counter-row {
+    padding: 17px 4px;
+  }
+
+
+  .counter-label span {
+    font-size: 17px;
+  }
+
+
+  .counter {
+    gap: 8px;
+  }
+
+
+  .counter-button {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .submit-rsvp {
+    min-width: 180px;
+
+    padding: 15px 40px;
+  }
+
+
+  .rsvp-success {
+    min-height: 350px;
+  }
+
+
+  .success-logo {
+    width: 80px;
+    height: 80px;
+
+    margin-bottom: 25px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 400px) {
+
+  .rsvp {
+    padding: 75px 16px;
+  }
+
+
+  .guest-name-main1 {
+    font-size: 27px;
+  }
+
+
+  .guest-name-family {
+    font-size: 20px;
+  }
+
+
+  .guest-counter-note {
+    max-width: 280px;
+
+    line-height: 1.6;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rsvp-logo,
+  .rsvp-small,
+  .rsvp-title,
+  .rsvp-message,
+  .guest-card,
+  .guest-name {
+    opacity: 1;
+
+    transform: none;
+
+    animation: none;
+  }
+
+
+  .rsvp-success,
+  .success-logo {
+    animation: none;
+  }
+
+
+  .loading-dots span {
+    animation: none;
+
+    opacity: 0.7;
+
+    transform: none;
+  }
+
+}

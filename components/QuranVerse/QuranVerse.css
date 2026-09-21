@@ -1,0 +1,314 @@
+/* =========================================
+   QURAN VERSE
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap');
+
+.quran-verse {
+  min-height: 70dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 110px 25px;
+
+  /* background: #f5f0e8; */
+  background: #f9f6eb;
+
+  color: #4a423b;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.quran-verse-content {
+  width: min(90%, 850px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================================
+   TOP ORNAMENT
+========================================= */
+
+.bismilah {
+  margin-bottom: 30px;
+
+  font-size: 20px;
+
+  color: #62503e;
+
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+
+/* =========================================
+   ARABIC
+========================================= */
+
+.quran-arabic {
+  margin: 0;
+
+  max-width: 850px;
+
+font-family: "Scheherazade New", serif;
+
+
+  font-size: clamp(25px, 3.4vw, 42px);
+
+  font-weight: 500;
+
+  line-height: 2;
+
+  color: #5f544b;
+
+  opacity: 0;
+
+  transform: translateY(25px);
+
+  transition:
+    opacity 1s ease 0.15s,
+    transform 1s ease 0.15s;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.quran-divider {
+  width: min(100%, 280px);
+
+  margin: 42px 0 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  opacity: 0;
+
+  transform: scaleX(0);
+
+  transition:
+    opacity 0.8s ease 0.8s,
+    transform 0.8s ease 0.8s;
+}
+
+.quran-divider span:not(.quran-divider-symbol) {
+  flex: 1;
+
+  height: 0.5px;
+
+  /* background: #b9ada0; */
+  background: #d1c4b6;
+
+
+}
+
+.quran-divider-symbol {
+  font-size: 11px;
+
+  color: #9a8d80;
+
+
+}
+
+
+/* =========================================
+   ENGLISH
+========================================= */
+
+.quran-english {
+  margin: 0;
+
+  max-width: 600px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+
+  font-style: italic;
+
+  color: #6f665df9;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.9s ease 1s,
+    transform 0.9s ease 1s;
+}
+
+
+/* =========================================
+   REFERENCE
+========================================= */
+
+.quran-reference {
+  margin: 30px 0 0;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #8c8176;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.8s ease 1.3s,
+    transform 0.8s ease 1.3s;
+}
+
+
+/* =========================================
+   VISIBLE STATE
+========================================= */
+
+.quran-verse.visible .quran-ornament {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.quran-verse.visible .quran-arabic {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.quran-verse.visible .quran-divider {
+  opacity: 1;
+
+  transform: scaleX(1);
+}
+
+.quran-verse.visible .quran-english {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.quran-verse.visible .quran-reference {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+  .quran-verse {
+    padding: 90px 20px;
+  }
+
+  .quran-verse-content {
+    width: 95%;
+  }
+
+  .quran-ornament {
+    margin-bottom: 30px;
+
+    font-size: 12px;
+  }
+
+  .quran-arabic {
+    font-size: clamp(22px, 6vw, 32px);
+
+    line-height: 2;
+  }
+
+  .quran-divider {
+    margin: 35px 0 28px;
+
+    gap: 10px;
+  }
+
+  .quran-english {
+    max-width: 360px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+  }
+
+  .quran-reference {
+    margin-top: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 400px) {
+  .quran-verse {
+    padding: 75px 16px;
+  }
+
+  .quran-arabic {
+    /* font-size: 21px; */
+
+    line-height: 2.05;
+  }
+
+  .quran-english {
+    font-size: 15px;
+
+    line-height: 2;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .quran-ornament,
+  .quran-arabic,
+  .quran-divider,
+  .quran-english,
+  .quran-reference {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+}

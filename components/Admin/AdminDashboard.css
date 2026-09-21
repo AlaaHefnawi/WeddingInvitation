@@ -1,0 +1,437 @@
+/* =========================================
+   ADMIN DASHBOARD
+========================================= */
+
+.admin-dashboard {
+  min-height: 100dvh;
+
+  padding: 50px 30px 80px;
+
+  background: #fdfaf2;
+
+  color: #4a423b;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.admin-dashboard-container {
+  width: min(100%, 1250px);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-dashboard-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+
+.admin-dashboard-small {
+  margin: 0 0 8px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+}
+
+
+.admin-dashboard-header h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 5vw, 56px);
+
+  font-weight: 400;
+
+  color: #584d43;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.admin-dashboard-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+
+.admin-dashboard-actions button {
+  padding: 11px 18px;
+
+  border: 1px solid #b9aa9c;
+
+  background: transparent;
+
+  color: #67584c;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.admin-dashboard-actions button:hover {
+  background: #67584c;
+
+  border-color: #67584c;
+
+  color: white;
+}
+
+
+.logout-button:hover {
+  background: #8f3f3f !important;
+
+  border-color: #8f3f3f !important;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.admin-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 35px;
+}
+
+
+.summary-card {
+  padding: 20px 15px;
+
+  border: 1px solid #ddd0c2;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  text-align: center;
+}
+
+
+.summary-card span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+}
+
+
+.summary-card strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 400;
+
+  color: #584d43;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-table-wrapper {
+  overflow-x: auto;
+
+  border: 1px solid #ddd0c2;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+.admin-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+}
+
+
+.admin-table th,
+.admin-table td {
+  padding: 18px 16px;
+
+  border-bottom: 1px solid #e2d8ce;
+
+  text-align: left;
+}
+
+
+.admin-table th {
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-weight: 400;
+
+  color: #9a8d80;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+.admin-table td {
+  font-size: 13px;
+
+  color: #67584c;
+}
+
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+.admin-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+  display: inline-block;
+
+  padding: 6px 10px;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+.status-accepted {
+  color: #6cbe70;
+
+  background: rgba(93, 116, 94, 0.1);
+}
+
+
+.status-declined {
+  color: #e65555;
+
+  background: rgba(143, 63, 63, 0.08);
+}
+
+
+.status-pending {
+  color: #9a8d80;
+
+  background: rgba(154, 141, 128, 0.1);
+}
+
+
+/* =========================================
+   INVITATION ACTIONS
+========================================= */
+
+.invitation-actions {
+  display: flex;
+
+  gap: 8px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   COPY LINK
+========================================= */
+
+.copy-link-button {
+  padding: 8px 13px;
+
+  border: 1px solid #b9aa9c;
+
+  background: transparent;
+
+  color: #67584c;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.copy-link-button:hover {
+  background: #67584c;
+
+  border-color: #67584c;
+
+  color: white;
+}
+
+
+/* =========================================
+   OPEN LINK
+========================================= */
+
+.open-link-button {
+  padding: 8px 13px;
+
+  border: 1px solid #67584c;
+
+  background: #67584c;
+
+  color: white;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.open-link-button:hover {
+  background: transparent;
+
+  border-color: #67584c;
+
+  color: #67584c;
+}
+
+
+/* =========================================
+   LOADING / EMPTY
+========================================= */
+
+.admin-loading,
+.admin-empty {
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #82776b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+  .admin-summary {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .admin-dashboard {
+    padding: 30px 15px 60px;
+  }
+
+
+  .admin-dashboard-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+  }
+
+
+  .admin-dashboard-actions {
+    width: 100%;
+  }
+
+
+  .admin-dashboard-actions button {
+    flex: 1;
+  }
+
+
+  .admin-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+
+  .summary-card {
+    padding: 17px 12px;
+  }
+
+
+  .summary-card strong {
+    font-size: 25px;
+  }
+
+
+  .invitation-actions {
+    flex-wrap: wrap;
+  }
+
+}

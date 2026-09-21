@@ -1,0 +1,227 @@
+/* =========================================
+   ADMIN LOGIN
+========================================= */
+
+.admin-login {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background: #fdfaf2;
+
+  color: #4a423b;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.admin-login-container {
+  width: min(100%, 450px);
+
+  padding: 55px 45px;
+
+  text-align: center;
+
+  border: 1px solid #ddd0c2;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 15px 40px rgba(70, 50, 40, 0.06);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.admin-login-logo {
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 25px;
+}
+
+.admin-login-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-login-small {
+  margin: 0 0 10px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+}
+
+.admin-login-container h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 48px;
+
+  font-weight: 400;
+
+  color: #584d43;
+}
+
+.admin-login-message {
+  margin: 15px auto 40px;
+
+  max-width: 330px;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: #756b61;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-field {
+  text-align: left;
+
+  margin-bottom: 25px;
+}
+
+.admin-field label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #82776b;
+}
+
+.admin-field input {
+  width: 100%;
+
+  padding: 14px 5px;
+
+  border: none;
+
+  border-bottom: 1px solid #b9aa9c;
+
+  background: transparent;
+
+  color: #67584c;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.admin-field input::placeholder {
+  color: #b5a99d;
+
+  font-size: 14px;
+}
+
+.admin-field input:focus {
+  border-color: #8f3f3f;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.admin-login-error {
+  margin: -5px 0 20px;
+
+  font-size: 13px;
+
+  color: #8f3f3f;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.admin-login-container button {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 15px;
+
+  border: none;
+
+  background: #67584c;
+
+  color: white;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+.admin-login-container button:hover:not(:disabled) {
+  background: #8f3f3f;
+}
+
+.admin-login-container button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+  .admin-login-container {
+    padding: 45px 25px;
+  }
+
+  .admin-login-container h1 {
+    font-size: 42px;
+  }
+}

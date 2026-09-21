@@ -1,0 +1,315 @@
+/* =========================================
+   INTRO
+========================================= */
+
+.invitation-intro {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  z-index: 2000;
+
+  overflow: hidden;
+
+  background: #dacbbc;
+
+}
+
+
+/* =========================================
+   ENVELOPE
+========================================= */
+
+.envelope {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.envelope-svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================
+   ENVELOPE BASE
+========================================= */
+
+.envelope-shape {
+  fill: #dacbbc;
+
+  transition:
+    transform 2s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.6s ease;
+}
+
+
+/* =========================================
+   FLAPS
+========================================= */
+
+.envelope-flap {
+  fill: #dacbbc;
+
+  transform-box: fill-box;
+
+  transition:
+    transform 7s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.5s ease;
+}
+
+
+/* =========================================
+   SHADOWS
+========================================= */
+
+.top-flap {
+  filter:
+    drop-shadow(
+      0 12px 14px rgba(70, 50, 40, 0.30)
+    );
+}
+
+.bottom-flap {
+  filter:
+    drop-shadow(
+      0 -12px 14px rgba(70, 50, 40, 0.24)
+    );
+}
+
+.left-flap {
+  filter:
+    drop-shadow(
+      12px 0 14px rgba(70, 50, 40, 0.24)
+    );
+}
+
+.right-flap {
+  filter:
+    drop-shadow(
+      -12px 0 14px rgba(70, 50, 40, 0.24)
+    );
+}
+
+
+/* =========================================
+   PAPER TEXTURE
+========================================= */
+
+.paper-texture {
+  position: absolute;
+  inset: 0;
+
+  z-index: 8;
+
+  pointer-events: none;
+
+  opacity: 0.5;
+
+  background-image: url("/images/texture.jpg");
+
+  background-size: 300px 300px;
+
+  background-repeat: repeat;
+}
+
+
+/* =========================================
+   OPENING
+========================================= */
+
+.invitation-intro.open .top-flap {
+  transform: translateY(-110%);
+}
+
+.invitation-intro.open .bottom-flap {
+  transform: translateY(110%);
+}
+
+.invitation-intro.open .left-flap {
+  opacity: 0;
+}
+
+.invitation-intro.open .right-flap {
+  opacity: 0;
+}
+
+
+/* Envelope body disappears */
+
+.invitation-intro.open .envelope-shape {
+  transform: scale(1.08);
+
+  opacity: 0;
+}
+
+
+/* =========================================
+   SEAL
+========================================= */
+
+.envelope-seal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 100px;
+  height: 100px;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.7s ease,
+    opacity 0.5s ease;
+}
+
+.envelope-seal img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 5px 8px rgba(50, 35, 25, 0.25)
+    );
+}
+
+
+/* Seal opening */
+
+.invitation-intro.open .envelope-seal {
+  transform:
+    translate(-50%, -50%)
+    scale(0.65);
+
+  opacity: 0;
+}
+
+
+/* =========================================
+   OPEN INSTRUCTION
+========================================= */
+
+.open-instruction {
+  position: absolute;
+
+  bottom: 45px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 30;
+
+  color: rgb(100, 95, 84);
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  pointer-events: none;
+
+  animation: pulse 2s infinite;
+
+  transition: opacity 0.6s ease;
+}
+
+.invitation-intro.open .open-instruction {
+  opacity: 0;
+
+  animation: none;
+}
+
+
+/* =========================================
+   INTRO EXIT
+========================================= */
+
+.invitation-intro.open {
+  animation:
+    introExit 1.5s ease 0.1s forwards;
+
+  pointer-events: none;
+}
+
+@keyframes introExit {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/* =========================================
+   PULSE
+========================================= */
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+  .envelope-seal {
+    width: 75px;
+    height: 75px;
+  }
+
+  .open-instruction {
+    bottom: 30px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 400px) {
+  .envelope-seal {
+    width: 68px;
+    height: 68px;
+  }
+
+  .open-instruction {
+    bottom: 25px;
+    font-size: 10px;
+  }
+}

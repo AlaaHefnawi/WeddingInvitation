@@ -1,0 +1,248 @@
+/* =========================================
+   FOOTER
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.footer {
+  min-height: 55dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 30px;
+
+  /* background:
+    linear-gradient(
+      rgba(245, 239, 229, 0.88),
+      rgba(245, 239, 229, 0.88)
+    ); */
+  background: #f9f6eb;
+
+  background-size: cover;
+  background-position: center;
+
+  color: #4a423b;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.footer-content {
+  width: min(90%, 650px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.footer-logo {
+  width: 130px;
+  height: 130px;
+
+  margin-bottom: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   THANK YOU
+========================================= */
+
+.footer-thank-you {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+    /* font-family: "Great Vibes"; */
+    font-family: 'DM Sans';
+
+  font-size: clamp(48px, 8vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  color: #584d43;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.footer-message {
+  margin: 0px 0 0;
+
+  max-width: 450px;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.5px;
+
+  color: #756b61;
+}
+.footer-message-arabic{
+  font-family:
+    "Noto Naskh Arabic",
+    "Amiri",
+    "Traditional Arabic",
+    serif;
+  max-width: 450px;
+
+  font-size: 19px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  /* color: #756b61b5; */
+  color: #7d7368;
+
+}
+.with-love{
+
+  max-width: 450px;
+
+  font-size: 22px;
+
+  line-height: 1.8;
+
+  letter-spacing: 1px;
+
+  color: #756b61;
+  font-family: Georgia, "Times New Roman", serif;
+
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.footer-divider {
+  width: 70px;
+  height: 1px;
+
+  margin: 35px 0 25px;
+
+  background: #b9aa9c;
+}
+
+
+/* =========================================
+   NAMES
+========================================= */
+
+.footer-names {
+  margin: 0;
+
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-family: "Great Vibes", cursive;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  /* color: #67584c; */
+  color: #b89b5e;
+  /* color: #9a251a; */
+
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    min-height: 50dvh;
+
+    padding: 80px 25px;
+  }
+
+  .footer-logo {
+     width: 180px;
+    height: 100px;
+    img{
+    border-radius: 55%;
+    }
+
+    margin-bottom: 28px;
+  }
+
+  .footer-message{
+    max-width: 320px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+  .with-love{
+    font-size: 19px;
+  }
+
+  .footer-divider {
+    margin: 30px 0 22px;
+  }
+
+  .footer-names {
+    font-size: 34px;
+
+    letter-spacing: 3px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 400px) {
+  .footer {
+    padding: 70px 20px;
+  }
+
+  .footer-logo {
+    width: 180px;
+    height: 100px;
+    img{
+    border-radius: 55%;
+    }
+  }
+
+  .footer-message {
+    font-size: 15px;
+  }
+.footer-message-arabic {
+    font-size: 17px;
+  }
+  
+}

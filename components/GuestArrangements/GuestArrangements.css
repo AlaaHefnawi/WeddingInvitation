@@ -1,0 +1,734 @@
+/* =========================================
+   GUEST ARRANGEMENTS
+========================================= */
+
+.guest-arrangements {
+  min-height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 120px 25px;
+
+  /* background: #f8f4ee; */
+  background: #f9f6eb;
+  
+
+
+  color: #4a423b;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.guest-arrangements-content {
+  width: min(90%, 820px);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.arrangements-eyebrow {
+  margin: 0 0 12px;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #9a8d80;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+}
+
+.arrangements-title {
+  margin: 0;
+
+  text-align: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 6vw, 60px);
+
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  /* color: #3f3832; */
+  color: #584d43;
+
+
+  opacity: 0;
+
+  transform: translateY(25px);
+}
+
+
+/* =========================================
+   MAIN DIVIDER
+========================================= */
+
+.arrangements-divider {
+  width: min(100%, 260px);
+
+  margin: 30px auto 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  opacity: 0;
+
+  transform: scaleX(0);
+}
+
+.arrangements-divider span:not(:nth-child(2)) {
+  flex: 1;
+
+  height: 1px;
+
+  background: #c9beb2;
+}
+
+.arrangements-divider span:nth-child(2) {
+  font-size: 10px;
+
+  color: #a18f7f;
+}
+
+
+/* =========================================
+   LANGUAGE BLOCK
+========================================= */
+
+.language-block {
+  opacity: 0;
+
+  transform: translateY(30px);
+}
+
+
+/* =========================================
+   LANGUAGE LABEL
+========================================= */
+
+.language-label {
+  margin: 0 0 22px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #a18f7f;
+}
+
+
+/* =========================================
+   INTRO TEXT
+========================================= */
+
+.arrangements-intro {
+  margin: 0 auto;
+
+  max-width: 660px;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #6f665d;
+}
+
+.english-block {
+  text-align: left;
+}
+
+.english-block .arrangements-intro {
+  margin-left: 0;
+}
+
+
+/* =========================================
+   ARRANGEMENT LIST
+========================================= */
+
+.arrangement-list {
+  margin-top: 38px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 50px;
+}
+
+
+/* =========================================
+   ITEM
+========================================= */
+
+.arrangement-item {
+  position: relative;
+
+  padding-left: 28px;
+}
+
+.arrangement-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 7px;
+  left: 0;
+
+  width: 1px;
+  height: 100%;
+
+  background: #c9beb2;
+}
+
+
+/* =========================================
+   ITEM TITLE
+========================================= */
+
+.arrangement-item h3 {
+  margin: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  color: #4f463e;
+}
+
+
+/* =========================================
+   ITEM NUMBER
+========================================= */
+
+/* .item-number {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  color: #a18f7f;
+
+  opacity: 0.8;
+} */
+
+
+/* =========================================
+   ITEM DESCRIPTION
+========================================= */
+
+.arrangement-item p {
+  margin: 13px 0 0;
+
+  max-width: 280px;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: #7b7168;
+}
+
+
+/* =========================================
+   PRIVACY NOTE
+========================================= */
+
+.privacy-note {
+  position: relative;
+
+  margin: 42px 0 0;
+
+  padding: 28px 0 0;
+
+  max-width: 720px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1.9;
+
+  color: #6f665d;
+}
+
+.privacy-note::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 55px;
+
+  height: 1px;
+
+  background: #b9aa9c;
+}
+
+
+/* =========================================
+   LANGUAGE IMAGE DIVIDER
+========================================= */
+
+.language-divider {
+  width: 100%;
+
+  margin: 75px auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+}
+
+.language-divider img {
+  display: block;
+
+  width: min(100%, 180px);
+
+  height: auto;
+
+  object-fit:contain;
+}
+
+
+/* =========================================
+   ARABIC
+========================================= */
+
+.arabic-block {
+  text-align: right;
+}
+
+.arabic-block .arrangements-intro {
+  margin-right: 0;
+
+  font-family:
+    "Noto Naskh Arabic",
+    "Amiri",
+    "Traditional Arabic",
+    serif;
+
+  font-size: 22px;
+
+  line-height: 2.2;
+}
+
+.arabic-block .arrangement-list {
+  direction: rtl;
+}
+
+.arabic-block .arrangement-item {
+  padding-left: 0;
+
+  padding-right: 28px;
+}
+
+.arabic-block .arrangement-item::before {
+  left: auto;
+
+  right: 0;
+}
+
+.arabic-block .arrangement-item h3 {
+  justify-content: flex-start;
+
+  font-family:
+    "Noto Naskh Arabic",
+    "Amiri",
+    "Traditional Arabic",
+    serif;
+
+  font-size: 27px;
+
+  /* line-height: 1.4; */
+}
+
+.arabic-block .arrangement-item p {
+  margin-right: 0;
+
+  margin-left: auto;
+
+  font-family:
+    "Noto Naskh Arabic",
+    "Amiri",
+    "Traditional Arabic",
+    serif;
+
+  font-size: 20px;
+
+  line-height: 2;
+}
+
+.arabic-block .privacy-note {
+  margin-right: 0;
+
+  margin-left: auto;
+
+  font-family:
+    "Noto Naskh Arabic",
+    "Amiri",
+    "Traditional Arabic",
+    serif;
+
+  font-size: 19px;
+  font-weight: 600;
+
+
+  line-height: 2.1;
+}
+
+.arabic-block .privacy-note::before {
+  left: auto;
+
+  right: 0;
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.guest-arrangements.visible
+.arrangements-eyebrow {
+  animation:
+    revealUp 0.8s ease 0.15s forwards;
+}
+
+.guest-arrangements.visible
+.arrangements-title {
+  animation:
+    revealUp 0.9s ease 0.3s forwards;
+}
+
+.guest-arrangements.visible
+.arrangements-divider {
+  animation:
+    dividerReveal 0.8s ease 0.5s forwards;
+}
+
+.guest-arrangements.visible
+.english-block {
+  animation:
+    revealBlock 0.9s ease 0.7s forwards;
+}
+
+.guest-arrangements.visible
+.language-divider {
+  animation:
+    dividerImageReveal 0.8s ease 1.15s forwards;
+}
+
+.guest-arrangements.visible
+.arabic-block {
+  animation:
+    revealBlock 0.9s ease 1.35s forwards;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes revealBlock {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes dividerReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scaleX(1);
+  }
+}
+
+@keyframes dividerImageReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px)
+      scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+  .guest-arrangements {
+    padding: 90px 20px;
+  }
+
+  .guest-arrangements-content {
+    width: 94%;
+  }
+
+  .arrangements-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .arrangements-title {
+    font-size: 38px;
+  }
+
+  .arrangements-divider {
+    margin-bottom: 50px;
+  }
+
+  .arrangements-intro {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .arrangement-list {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    margin-top: 30px;
+  }
+
+  .arrangement-item {
+    padding-left: 22px;
+  }
+
+  .arrangement-item h3 {
+    font-size: 22px;
+  }
+
+  .arrangement-item p {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .privacy-note {
+    margin-top: 35px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+    font-weight: 600;
+
+  }
+
+  .language-divider {
+    margin: 10px auto;
+  }
+
+  .language-divider img {
+    width: min(100%, 140px);
+  }
+
+  .arabic-block .arrangements-intro {
+    font-size: 19px;
+
+    line-height: 2.15;
+  }
+
+  .arabic-block .arrangement-list {
+    gap: 30px;
+  }
+
+  .arabic-block .arrangement-item h3 {
+    font-size: 24px;
+  }
+
+  .arabic-block .arrangement-item p {
+    font-size: 17px;
+
+    line-height: 2;
+  }
+
+  .arabic-block .privacy-note {
+    font-size: 17px;
+
+    line-height: 2;
+  }
+  .arabic-block .arrangements-intro {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .arabic-block .arrangement-item h3 {
+    font-size: 25px;
+  }
+
+  .arabic-block .arrangement-item p
+  {
+    font-size: 20px;
+  }
+  
+  .arabic-block .privacy-note {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .language-divider img {
+    width: 200px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media screen and (max-width: 400px) {
+  .guest-arrangements {
+    padding: 75px 16px;
+  }
+
+  .arrangements-title {
+    font-size: 34px;
+  }
+
+  .arrangement-item h3 {
+    font-size: 20px;
+  }
+
+  .arabic-block .arrangements-intro {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .arabic-block .arrangement-item h3 {
+    font-size: 25px;
+  }
+
+  .arabic-block .arrangement-item p
+  {
+    font-size: 20px;
+  }
+  
+  .arabic-block .privacy-note {
+    font-size: 18px;
+  }
+
+  .language-divider img {
+    width: 200px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .arrangements-eyebrow,
+  .arrangements-title,
+  .arrangements-divider,
+  .language-block,
+  .language-divider {
+    opacity: 1;
+
+    transform: none;
+
+    animation: none;
+  }
+}

@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Carattere&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-color: #f4eee4;
+}
+
+
+/* =========================================
+   BLURRED BACKGROUND
+========================================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: -15px;
+
+  background-image: url("/images/hero.jpeg");
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-size: cover;
+
+   filter: blur(5px);
+
+  opacity: 0.77;
+
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  max-width: 280px;
+
+  animation: heroReveal 1.2s ease forwards;
+  color: rgb(96, 7, 7);
+  /* color: rgb(79, 65, 43); */
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.hero-subtitle {
+  margin: 0 0 20px;
+
+  font-size: 18px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.hero-title {
+  margin: 0;
+
+  font-family: "Parisienne", cursive;
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: rgb(149, 11, 11);
+}
+
+
+/* =========================================
+   TITLE SIZE
+========================================= */
+
+.hero-title h1 {
+  font-size: 37px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.hero-date {
+  margin: 25px 0 0;
+
+  font-size: 17px;
+
+  letter-spacing: 4px;
+
+  text-align: center;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  z-index: 1;
+
+  bottom: 30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  animation: fadeIn 2s ease forwards;
+
+  color: rgb(101, 36, 36);
+}
+
+
+/* =========================================
+   SCROLL LINE
+========================================= */
+
+.scroll-indicator span {
+  width: 1px;
+
+  height: 35px;
+
+  background-color: currentColor;
+
+  animation:
+    scrollLine 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   SCROLL TEXT
+========================================= */
+
+.scroll-indicator p {
+  margin: 0;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes scrollLine {
+  0%,
+  100% {
+    transform: scaleY(0.5);
+
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+
+    transform-origin: top;
+  }
+}
