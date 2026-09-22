@@ -21,12 +21,26 @@ const InvitationIntro = ({ onFinish }) => {
       <div className="envelope" onClick={handleOpen}>
         <svg
   className="envelope-svg"
-  viewBox="0 0 1200 800"
+  viewBox="-400 0 2000 800"
   preserveAspectRatio="none"
 >
-  {/* =========================================
-     ENVELOPE BASE
-  ========================================= */}
+  <defs>
+    <filter
+      id="shadow"
+      x="-30%"
+      y="-30%"
+      width="160%"
+      height="160%"
+    >
+      <feDropShadow
+        dx="0"
+        dy="10"
+        stdDeviation="12"
+        floodColor="#59483c"
+        floodOpacity="0.25"
+      />
+    </filter>
+  </defs>
 
   <rect
     className="envelope-shape"
@@ -36,40 +50,28 @@ const InvitationIntro = ({ onFinish }) => {
     height="800"
   />
 
-  {/* =========================================
-     LEFT FLAP
-  ========================================= */}
-
   <path
     className="envelope-flap left-flap"
     d="M-400 0 L600 400 L-400 800 Z"
+    filter="url(#shadow)"
   />
-
-  {/* =========================================
-     RIGHT FLAP
-  ========================================= */}
 
   <path
     className="envelope-flap right-flap"
     d="M1600 0 L600 400 L1600 800 Z"
+    filter="url(#shadow)"
   />
-
-  {/* =========================================
-     BOTTOM FLAP
-  ========================================= */}
 
   <path
     className="envelope-flap bottom-flap"
     d="M-400 800 L600 400 L1600 800 Z"
+    filter="url(#shadow)"
   />
-
-  {/* =========================================
-     TOP FLAP
-  ========================================= */}
 
   <path
     className="envelope-flap top-flap"
     d="M-400 0 L1600 0 L600 400 Z"
+    filter="url(#shadow)"
   />
 </svg>
 
