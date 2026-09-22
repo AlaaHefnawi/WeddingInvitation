@@ -413,7 +413,7 @@
 ========================================= */
 
 /* =========================================
-   SAFARI HTML ENVELOPE
+   SAFARI ENVELOPE
 ========================================= */
 
 .safari-envelope {
@@ -430,7 +430,7 @@
 
 
 /* =========================================
-   SAFARI BASE
+   BASE
 ========================================= */
 
 .safari-envelope-base {
@@ -448,57 +448,25 @@
 
 
 /* =========================================
-   SAFARI FLAPS
+   COMMON FLAP
 ========================================= */
 
 .safari-flap {
   position: absolute;
-  inset: 0;
 
-  width: 100%;
-  height: 100%;
+  width: 141.5%;
+  height: 141.5%;
 
   background: #dacbbc;
+
+  left: 50%;
+  top: 50%;
+
+  transform-origin: center;
 
   transition:
     transform 7s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.5s ease;
-}
-
-
-/* =========================================
-   LEFT FLAP
-========================================= */
-
-.safari-left {
-  clip-path: polygon(
-    0% 0%,
-    50% 50%,
-    0% 100%
-  );
-
-  filter:
-    drop-shadow(
-      12px 0 14px rgba(70, 50, 40, 0.24)
-    );
-}
-
-
-/* =========================================
-   RIGHT FLAP
-========================================= */
-
-.safari-right {
-  clip-path: polygon(
-    100% 0%,
-    50% 50%,
-    100% 100%
-  );
-
-  filter:
-    drop-shadow(
-      -12px 0 14px rgba(70, 50, 40, 0.24)
-    );
 }
 
 
@@ -508,10 +476,14 @@
 
 .safari-top {
   clip-path: polygon(
-    0% 0%,
-    100% 0%,
+    0 0,
+    100% 0,
     50% 50%
   );
+
+  transform:
+    translate(-50%, -50%)
+    translateY(-20.7%);
 
   filter:
     drop-shadow(
@@ -526,10 +498,14 @@
 
 .safari-bottom {
   clip-path: polygon(
-    0% 100%,
+    0 100%,
     50% 50%,
     100% 100%
   );
+
+  transform:
+    translate(-50%, -50%)
+    translateY(20.7%);
 
   filter:
     drop-shadow(
@@ -539,15 +515,63 @@
 
 
 /* =========================================
-   SAFARI OPENING
+   LEFT FLAP
+========================================= */
+
+.safari-left {
+  clip-path: polygon(
+    0 0,
+    50% 50%,
+    0 100%
+  );
+
+  transform:
+    translate(-50%, -50%)
+    translateX(-20.7%);
+
+  filter:
+    drop-shadow(
+      12px 0 14px rgba(70, 50, 40, 0.24)
+    );
+}
+
+
+/* =========================================
+   RIGHT FLAP
+========================================= */
+
+.safari-right {
+  clip-path: polygon(
+    100% 0,
+    50% 50%,
+    100% 100%
+  );
+
+  transform:
+    translate(-50%, -50%)
+    translateX(20.7%);
+
+  filter:
+    drop-shadow(
+      -12px 0 14px rgba(70, 50, 40, 0.24)
+    );
+}
+
+
+/* =========================================
+   OPENING
 ========================================= */
 
 .invitation-intro.open .safari-top {
-  transform: translateY(-110%);
+  transform:
+    translate(-50%, -50%)
+    translateY(-110%);
 }
 
 .invitation-intro.open .safari-bottom {
-  transform: translateY(110%);
+  transform:
+    translate(-50%, -50%)
+    translateY(110%);
 }
 
 .invitation-intro.open .safari-left {

@@ -128,9 +128,6 @@ const InvitationIntro = ({ onFinish }) => {
       <div className="envelope" onClick={handleOpen}>
 
         {!isSafari ? (
-          /* =========================
-             ORIGINAL SVG
-          ========================= */
           <svg
             className="envelope-svg"
             viewBox="0 0 1200 800"
@@ -187,32 +184,24 @@ const InvitationIntro = ({ onFinish }) => {
             />
           </svg>
         ) : (
-          /* =========================
-             SAFARI HTML VERSION
-          ========================= */
           <div className="safari-envelope">
 
-            <div className="safari-envelope-base"></div>
+            <div className="safari-envelope-base" />
 
-            <div className="safari-flap safari-left"></div>
+            <div className="safari-flap safari-left" />
 
-            <div className="safari-flap safari-right"></div>
+            <div className="safari-flap safari-right" />
 
-            <div className="safari-flap safari-bottom"></div>
+            <div className="safari-flap safari-bottom" />
 
-            <div className="safari-flap safari-top"></div>
+            <div className="safari-flap safari-top" />
 
           </div>
         )}
 
-        {/* =========================
-            TEXTURE
-        ========================= */}
-        <div className="paper-texture"></div>
+        {/* KEEP THIS */}
+        <div className="paper-texture" />
 
-        {/* =========================
-            SEAL
-        ========================= */}
         <div className="envelope-seal">
           <img
             src="/images/seal.webp"
@@ -220,9 +209,6 @@ const InvitationIntro = ({ onFinish }) => {
           />
         </div>
 
-        {/* =========================
-            INSTRUCTION
-        ========================= */}
         <div className="open-instruction">
           Click to open
         </div>
