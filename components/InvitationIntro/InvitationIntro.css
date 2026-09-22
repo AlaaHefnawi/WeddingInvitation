@@ -435,11 +435,30 @@
   inset: 0;
 
   background: #dacbbc;
+
+  transition:
+    transform 2s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.6s ease;
 }
 
 
 /* =========================================
-   FLAPS
+   OVERSIZED ENVELOPE CANVAS
+========================================= */
+
+.safari-envelope-canvas {
+  position: absolute;
+
+  width: 166.6667%;
+  height: 100%;
+
+  left: -33.3333%;
+  top: 0;
+}
+
+
+/* =========================================
+   ALL FLAPS
 ========================================= */
 
 .safari-left,
@@ -448,9 +467,14 @@
 .safari-bottom {
   position: absolute;
 
-  z-index: 2;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
 
   background: #dacbbc;
+
+  z-index: 2;
 
   pointer-events: none;
 }
@@ -458,21 +482,20 @@
 
 /* =========================================
    LEFT FLAP
+   Exact mirror of RIGHT
 ========================================= */
 
 .safari-left {
-  width: 100%;
-  height: 100%;
+  clip-path: polygon(
+    0 0,
+    50% 50%,
+    0 100%
+  );
 
-  left: -50%;
-  top: 0;
-
-  transform: skewX(-26.565deg);
-
-  transform-origin: right center;
-
-  box-shadow:
-    12px 0 14px rgba(70, 50, 40, 0.24);
+  filter:
+    drop-shadow(
+      12px 0 14px rgba(70, 50, 40, 0.24)
+    );
 }
 
 
@@ -481,18 +504,16 @@
 ========================================= */
 
 .safari-right {
-  width: 100%;
-  height: 100%;
+  clip-path: polygon(
+    100% 0,
+    50% 50%,
+    100% 100%
+  );
 
-  right: -50%;
-  top: 0;
-
-  transform: skewX(26.565deg);
-
-  transform-origin: left center;
-
-  box-shadow:
-    -12px 0 14px rgba(70, 50, 40, 0.24);
+  filter:
+    drop-shadow(
+      -12px 0 14px rgba(70, 50, 40, 0.24)
+    );
 }
 
 
@@ -501,18 +522,16 @@
 ========================================= */
 
 .safari-top {
-  width: 100%;
-  height: 100%;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 50%
+  );
 
-  left: 0;
-  top: -50%;
-
-  transform: skewY(-26.565deg);
-
-  transform-origin: center bottom;
-
-  box-shadow:
-    0 12px 14px rgba(70, 50, 40, 0.30);
+  filter:
+    drop-shadow(
+      0 12px 14px rgba(70, 50, 40, 0.30)
+    );
 }
 
 
@@ -521,18 +540,16 @@
 ========================================= */
 
 .safari-bottom {
-  width: 100%;
-  height: 100%;
+  clip-path: polygon(
+    0 100%,
+    50% 50%,
+    100% 100%
+  );
 
-  left: 0;
-  bottom: -50%;
-
-  transform: skewY(26.565deg);
-
-  transform-origin: center top;
-
-  box-shadow:
-    0 -12px 14px rgba(70, 50, 40, 0.24);
+  filter:
+    drop-shadow(
+      0 -12px 14px rgba(70, 50, 40, 0.24)
+    );
 }
 
 
@@ -541,31 +558,20 @@
 ========================================= */
 
 .invitation-intro.open .safari-top {
-  transform:
-    translateY(-110%)
-    skewY(-26.565deg);
+  transform: translateY(-110%);
+  transition:
+    transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .invitation-intro.open .safari-bottom {
-  transform:
-    translateY(110%)
-    skewY(26.565deg);
+  transform: translateY(110%);
+  transition:
+    transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.invitation-intro.open .safari-left {
-  opacity: 0;
-}
-
+.invitation-intro.open .safari-left,
 .invitation-intro.open .safari-right {
   opacity: 0;
-}
 
-.invitation-intro.open .safari-envelope-base {
-  transform: scale(1.08);
-
-  opacity: 0;
-
-  transition:
-    transform 2s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.6s ease;
+  transition: opacity 0.5s ease;
 }

@@ -185,27 +185,21 @@ const InvitationIntro = ({ onFinish }) => {
           </svg>
         ) : (
           <div className="safari-envelope">
-  <div className="safari-envelope-base" />
 
-  <div className="safari-flap safari-left">
-    <div className="flap-shape" />
-  </div>
+            <div className="safari-envelope-base" />
 
-  <div className="safari-flap safari-right">
-    <div className="flap-shape" />
-  </div>
+            <div className="safari-envelope-canvas">
 
-  <div className="safari-flap safari-top">
-    <div className="flap-shape" />
-  </div>
+              <div className="safari-left" />
+              <div className="safari-right" />
+              <div className="safari-bottom" />
+              <div className="safari-top" />
 
-  <div className="safari-flap safari-bottom">
-    <div className="flap-shape" />
-  </div>
-</div>
+            </div>
+
+          </div>
         )}
 
-        {/* KEEP THIS */}
         <div className="paper-texture" />
 
         <div className="envelope-seal">
