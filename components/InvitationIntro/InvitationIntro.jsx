@@ -104,15 +104,14 @@
 
 
 
-
 import { useState } from "react";
 import "./InvitationIntro.css";
 
-const isSafari =
-  /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
 const InvitationIntro = ({ onFinish }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const isSafari =
+    /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   const handleOpen = () => {
     if (isOpen) return;
@@ -128,8 +127,10 @@ const InvitationIntro = ({ onFinish }) => {
     <section className={`invitation-intro ${isOpen ? "open" : ""}`}>
       <div className="envelope" onClick={handleOpen}>
 
-        {/* NORMAL SVG */}
-        {!isSafari && (
+        {!isSafari ? (
+          /* =========================
+             ORIGINAL SVG
+          ========================= */
           <svg
             className="envelope-svg"
             viewBox="0 0 1200 800"
@@ -185,51 +186,33 @@ const InvitationIntro = ({ onFinish }) => {
               filter="url(#shadow)"
             />
           </svg>
+        ) : (
+          /* =========================
+             SAFARI HTML VERSION
+          ========================= */
+          <div className="safari-envelope">
+
+            <div className="safari-envelope-base"></div>
+
+            <div className="safari-flap safari-left"></div>
+
+            <div className="safari-flap safari-right"></div>
+
+            <div className="safari-flap safari-bottom"></div>
+
+            <div className="safari-flap safari-top"></div>
+
+          </div>
         )}
 
-        {/* SAFARI SVG */}
-        {isSafari && (
-          <svg
-            className="envelope-svg safari-envelope-svg"
-            viewBox="0 0 1200 800"
-            preserveAspectRatio="none"
-          >
-            {/* Base */}
-            <rect
-              className="safari-envelope-shape"
-              x="0"
-              y="0"
-              width="1200"
-              height="800"
-            />
+        {/* =========================
+            TEXTURE
+        ========================= */}
+        <div className="paper-texture"></div>
 
-            {/* Left flap */}
-            <polygon
-              className="safari-envelope-flap safari-left-flap"
-              points="0,0 600,400 0,800"
-            />
-
-            {/* Right flap */}
-            <polygon
-              className="safari-envelope-flap safari-right-flap"
-              points="1200,0 600,400 1200,800"
-            />
-
-            {/* Bottom flap */}
-            <polygon
-              className="safari-envelope-flap safari-bottom-flap"
-              points="0,800 600,400 1200,800"
-            />
-
-            {/* Top flap */}
-            <polygon
-              className="safari-envelope-flap safari-top-flap"
-              points="0,0 1200,0 600,400"
-            />
-          </svg>
-        )}
-<div className="paper-texture"></div>
-        {/* Seal */}
+        {/* =========================
+            SEAL
+        ========================= */}
         <div className="envelope-seal">
           <img
             src="/images/seal.webp"
@@ -237,10 +220,13 @@ const InvitationIntro = ({ onFinish }) => {
           />
         </div>
 
-        {/* Instruction */}
+        {/* =========================
+            INSTRUCTION
+        ========================= */}
         <div className="open-instruction">
           Click to open
         </div>
+
       </div>
     </section>
   );
