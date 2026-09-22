@@ -461,18 +461,55 @@
 }
 
 
-/* =========================================
-   LEFT FLAP
-========================================= */
-/* LEFT */
+/* ================================
+   SAFARI ENVELOPE
+================================ */
+
+.safari-envelope {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #dacbbc;
+}
+
+.safari-envelope-base {
+  position: absolute;
+  inset: 0;
+  background: #dacbbc;
+}
+
+
+/* ================================
+   FLAPS
+================================ */
+
+.safari-left,
+.safari-right,
+.safari-top,
+.safari-bottom {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* LEFT
+   Starts from the left edge,
+   NOT from the corner.
+*/
+
 .safari-left {
   left: 0;
   top: 50%;
 
   transform: translateY(-50%);
 
-  border-top: 38vh solid transparent;
-  border-bottom: 38vh solid transparent;
+  border-top: 35vh solid transparent;
+  border-bottom: 35vh solid transparent;
   border-left: 50vw solid #dacbbc;
 
   filter: drop-shadow(
@@ -481,15 +518,19 @@
 }
 
 
-/* RIGHT */
+/* RIGHT
+   Starts from the right edge,
+   NOT from the corner.
+*/
+
 .safari-right {
   right: 0;
   top: 50%;
 
   transform: translateY(-50%);
 
-  border-top: 38vh solid transparent;
-  border-bottom: 38vh solid transparent;
+  border-top: 35vh solid transparent;
+  border-bottom: 35vh solid transparent;
   border-right: 50vw solid #dacbbc;
 
   filter: drop-shadow(
@@ -498,21 +539,20 @@
 }
 
 
-/* TOP */
+/* TOP
+   Its diagonal begins on the
+   left/right edges below the corners.
+*/
+
 .safari-top {
-  top: 0;
+  top: 15vh;
   left: 50%;
 
   transform: translateX(-50%);
 
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-
-  /*
-    Taller than the visible gap,
-    so it fills the upper cropped area.
-  */
-  border-top: 62vh solid #dacbbc;
+  border-top: 35vh solid #dacbbc;
 
   filter: drop-shadow(
     0 12px 14px rgba(70, 50, 40, 0.30)
@@ -520,19 +560,52 @@
 }
 
 
-/* BOTTOM */
+/* BOTTOM
+   Same thing, mirrored.
+*/
+
 .safari-bottom {
-  bottom: 0;
+  bottom: 15vh;
   left: 50%;
 
   transform: translateX(-50%);
 
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-
-  border-bottom: 62vh solid #dacbbc;
+  border-bottom: 35vh solid #dacbbc;
 
   filter: drop-shadow(
     0 -12px 14px rgba(70, 50, 40, 0.24)
   );
+}
+
+
+/* ================================
+   OPENING
+================================ */
+
+.invitation-intro.open .safari-top {
+  transform:
+    translateX(-50%)
+    translateY(-110%);
+
+  transition:
+    transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.invitation-intro.open .safari-bottom {
+  transform:
+    translateX(-50%)
+    translateY(110%);
+
+  transition:
+    transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.invitation-intro.open .safari-left,
+.invitation-intro.open .safari-right {
+  opacity: 0;
+
+  transition:
+    opacity 0.5s ease;
 }
