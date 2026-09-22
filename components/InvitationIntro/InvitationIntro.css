@@ -467,10 +467,10 @@
 
 .safari-left {
   left: 0;
-  top: 0;
+  top: 15%;
 
-  border-top: 50vh solid transparent;
-  border-bottom: 50vh solid transparent;
+  border-top: 35vh solid transparent;
+  border-bottom: 35vh solid transparent;
   border-left: 50vw solid #dacbbc;
 
   filter:
@@ -486,10 +486,10 @@
 
 .safari-right {
   right: 0;
-  top: 0;
+  top: 15%;
 
-  border-top: 50vh solid transparent;
-  border-bottom: 50vh solid transparent;
+  border-top: 35vh solid transparent;
+  border-bottom: 35vh solid transparent;
   border-right: 50vw solid #dacbbc;
 
   filter:
