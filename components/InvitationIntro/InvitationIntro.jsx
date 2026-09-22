@@ -185,18 +185,13 @@ const InvitationIntro = ({ onFinish }) => {
           </svg>
         ) : (
           <div className="safari-envelope">
+  <div className="safari-envelope-base"></div>
 
-            <div className="safari-envelope-base" />
-
-            <div className="safari-flap safari-left" />
-
-            <div className="safari-flap safari-right" />
-
-            <div className="safari-flap safari-bottom" />
-
-            <div className="safari-flap safari-top" />
-
-          </div>
+  <div className="safari-left"></div>
+  <div className="safari-right"></div>
+  <div className="safari-top"></div>
+  <div className="safari-bottom"></div>
+</div>
         )}
 
         {/* KEEP THIS */}
