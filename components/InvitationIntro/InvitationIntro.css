@@ -419,9 +419,12 @@
 .safari-envelope {
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   overflow: hidden;
+
   background: #dacbbc;
 }
 
@@ -433,6 +436,7 @@
 .safari-envelope-base {
   position: absolute;
   inset: 0;
+
   background: #dacbbc;
 
   transition:
@@ -442,20 +446,14 @@
 
 
 /* =========================================
-   FLAPS
+   COMMON FLAP
 ========================================= */
 
-.safari-left,
-.safari-right,
-.safari-top,
-.safari-bottom {
+.safari-envelope > div:not(.safari-envelope-base) {
   position: absolute;
-  width: 0;
-  height: 0;
+  inset: 0;
 
-  z-index: 2;
-
-  border-style: solid;
+  background: #dacbbc;
 
   transition:
     transform 7s cubic-bezier(0.16, 1, 0.3, 1),
@@ -464,18 +462,20 @@
 
 
 /* =========================================
-   LEFT
-   Original SVG:
-   -400,0 → 600,400 → -400,800
+   LEFT FLAP
+
+   Original:
+   -400,0
+   600,400
+   -400,800
 ========================================= */
 
 .safari-left {
-  left: -33.333vw;
-  top: 0;
-
-  border-top: 50vh solid transparent;
-  border-bottom: 50vh solid transparent;
-  border-left: 83.333vw solid #dacbbc;
+  clip-path: polygon(
+    -33.333% 0%,
+    50% 50%,
+    -33.333% 100%
+  );
 
   filter:
     drop-shadow(
@@ -485,16 +485,20 @@
 
 
 /* =========================================
-   RIGHT
+   RIGHT FLAP
+
+   Original:
+   1600,0
+   600,400
+   1600,800
 ========================================= */
 
 .safari-right {
-  right: -33.333vw;
-  top: 0;
-
-  border-top: 50vh solid transparent;
-  border-bottom: 50vh solid transparent;
-  border-right: 83.333vw solid #dacbbc;
+  clip-path: polygon(
+    133.333% 0%,
+    50% 50%,
+    133.333% 100%
+  );
 
   filter:
     drop-shadow(
@@ -504,16 +508,20 @@
 
 
 /* =========================================
-   TOP
+   TOP FLAP
+
+   Original:
+   -400,0
+   1600,0
+   600,400
 ========================================= */
 
 .safari-top {
-  top: -50vh;
-  left: 0;
-
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-bottom: 100vh solid #dacbbc;
+  clip-path: polygon(
+    -33.333% 0%,
+    133.333% 0%,
+    50% 50%
+  );
 
   filter:
     drop-shadow(
@@ -523,16 +531,20 @@
 
 
 /* =========================================
-   BOTTOM
+   BOTTOM FLAP
+
+   Original:
+   -400,800
+   600,400
+   1600,800
 ========================================= */
 
 .safari-bottom {
-  bottom: -50vh;
-  left: 0;
-
-  border-left: 50vw solid transparent;
-  border-right: 50vw solid transparent;
-  border-top: 100vh solid #dacbbc;
+  clip-path: polygon(
+    -33.333% 100%,
+    50% 50%,
+    133.333% 100%
+  );
 
   filter:
     drop-shadow(
