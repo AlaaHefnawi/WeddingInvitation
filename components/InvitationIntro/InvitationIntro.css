@@ -36,8 +36,6 @@
 
   width: 100%;
   height: 100%;
-
-  overflow: visible;
 }
 
 
@@ -62,7 +60,6 @@
   fill: #dacbbc;
 
   transform-box: fill-box;
-  transform-origin: center;
 
   transition:
     transform 7s cubic-bezier(0.16, 1, 0.3, 1),
@@ -74,7 +71,7 @@
    SHADOWS
 ========================================= */
 
-/* .top-flap {
+.top-flap {
   filter:
     drop-shadow(
       0 12px 14px rgba(70, 50, 40, 0.30)
@@ -100,7 +97,7 @@
     drop-shadow(
       -12px 0 14px rgba(70, 50, 40, 0.24)
     );
-} */
+}
 
 
 /* =========================================
