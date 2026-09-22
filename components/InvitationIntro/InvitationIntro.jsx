@@ -127,7 +127,7 @@ const InvitationIntro = ({ onFinish }) => {
     <section className={`invitation-intro ${isOpen ? "open" : ""}`}>
       <div className="envelope" onClick={handleOpen}>
 
-        {!isSafari ? (
+        {/* {!isSafari ? (
           <svg
             className="envelope-svg"
             viewBox="0 0 1200 800"
@@ -183,7 +183,7 @@ const InvitationIntro = ({ onFinish }) => {
               filter="url(#shadow)"
             />
           </svg>
-        ) : (
+        ) : ( */}
           <div className="safari-envelope">
 
             <div className="safari-envelope-base" />
@@ -198,7 +198,7 @@ const InvitationIntro = ({ onFinish }) => {
             </div>
 
           </div>
-        )}
+        {/* )} */}
 
         <div className="paper-texture" />
 
