@@ -435,10 +435,6 @@
   inset: 0;
 
   background: #dacbbc;
-
-  transition:
-    transform 2s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.6s ease;
 }
 
 
@@ -461,46 +457,9 @@
 }
 
 
-/* ================================
-   SAFARI ENVELOPE
-================================ */
-
-.safari-envelope {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #dacbbc;
-}
-
-.safari-envelope-base {
-  position: absolute;
-  inset: 0;
-  background: #dacbbc;
-}
-
-
-/* ================================
-   FLAPS
-================================ */
-
-.safari-left,
-.safari-right,
-.safari-top,
-.safari-bottom {
-  position: absolute;
-  width: 0;
-  height: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-
-/* LEFT
-   Starts from the left edge,
-   NOT from the corner.
-*/
+/* =========================================
+   LEFT FLAP
+========================================= */
 
 .safari-left {
   left: 0;
@@ -512,16 +471,14 @@
   border-bottom: 35vh solid transparent;
   border-left: 50vw solid #dacbbc;
 
-  filter: drop-shadow(
-    12px 0 14px rgba(70, 50, 40, 0.24)
-  );
+  filter:
+    drop-shadow(-8px 0 10px rgba(70, 50, 40, 0.22));
 }
 
 
-/* RIGHT
-   Starts from the right edge,
-   NOT from the corner.
-*/
+/* =========================================
+   RIGHT FLAP
+========================================= */
 
 .safari-right {
   right: 0;
@@ -533,16 +490,14 @@
   border-bottom: 35vh solid transparent;
   border-right: 50vw solid #dacbbc;
 
-  filter: drop-shadow(
-    -12px 0 14px rgba(70, 50, 40, 0.24)
-  );
+  filter:
+    drop-shadow(8px 0 10px rgba(70, 50, 40, 0.22));
 }
 
 
-/* TOP
-   Its diagonal begins on the
-   left/right edges below the corners.
-*/
+/* =========================================
+   TOP FLAP
+========================================= */
 
 .safari-top {
   top: 15vh;
@@ -554,15 +509,14 @@
   border-right: 50vw solid transparent;
   border-top: 35vh solid #dacbbc;
 
-  filter: drop-shadow(
-    0 12px 14px rgba(70, 50, 40, 0.30)
-  );
+  filter:
+    drop-shadow(0 15px 10px rgba(70, 50, 40, 0.22));
 }
 
 
-/* BOTTOM
-   Same thing, mirrored.
-*/
+/* =========================================
+   BOTTOM FLAP
+========================================= */
 
 .safari-bottom {
   bottom: 15vh;
@@ -574,15 +528,14 @@
   border-right: 50vw solid transparent;
   border-bottom: 35vh solid #dacbbc;
 
-  filter: drop-shadow(
-    0 -12px 14px rgba(70, 50, 40, 0.24)
-  );
+  filter:
+    drop-shadow(0 -15px 10px rgba(70, 50, 40, 0.22));
 }
 
 
-/* ================================
-   OPENING
-================================ */
+/* =========================================
+   OPENING - SAFARI
+========================================= */
 
 .invitation-intro.open .safari-top {
   transform:
