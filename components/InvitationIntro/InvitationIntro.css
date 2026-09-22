@@ -462,103 +462,77 @@
 
 
 /* =========================================
-   LEFT
+   LEFT FLAP
 ========================================= */
-
+/* LEFT */
 .safari-left {
   left: 0;
-  top: 15%;
+  top: 50%;
 
-  border-top: 35vh solid transparent;
-  border-bottom: 35vh solid transparent;
+  transform: translateY(-50%);
+
+  border-top: 38vh solid transparent;
+  border-bottom: 38vh solid transparent;
   border-left: 50vw solid #dacbbc;
 
-  filter:
-    drop-shadow(
-      12px 0 14px rgba(70, 50, 40, 0.24)
-    );
+  filter: drop-shadow(
+    12px 0 14px rgba(70, 50, 40, 0.24)
+  );
 }
 
 
-/* =========================================
-   RIGHT
-========================================= */
-
+/* RIGHT */
 .safari-right {
   right: 0;
-  top: 15%;
+  top: 50%;
 
-  border-top: 35vh solid transparent;
-  border-bottom: 35vh solid transparent;
+  transform: translateY(-50%);
+
+  border-top: 38vh solid transparent;
+  border-bottom: 38vh solid transparent;
   border-right: 50vw solid #dacbbc;
 
-  filter:
-    drop-shadow(
-      -12px 0 14px rgba(70, 50, 40, 0.24)
-    );
+  filter: drop-shadow(
+    -12px 0 14px rgba(70, 50, 40, 0.24)
+  );
 }
 
 
-/* =========================================
-   TOP
-========================================= */
-
+/* TOP */
 .safari-top {
   top: 0;
-  left: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
 
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-top: 50vh solid #dacbbc;
 
-  filter:
-    drop-shadow(
-      0 12px 14px rgba(70, 50, 40, 0.30)
-    );
+  /*
+    Taller than the visible gap,
+    so it fills the upper cropped area.
+  */
+  border-top: 62vh solid #dacbbc;
+
+  filter: drop-shadow(
+    0 12px 14px rgba(70, 50, 40, 0.30)
+  );
 }
 
 
-/* =========================================
-   BOTTOM
-========================================= */
-
+/* BOTTOM */
 .safari-bottom {
   bottom: 0;
-  left: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
 
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-bottom: 50vh solid #dacbbc;
 
-  filter:
-    drop-shadow(
-      0 -12px 14px rgba(70, 50, 40, 0.24)
-    );
-}
+  border-bottom: 62vh solid #dacbbc;
 
-
-/* =========================================
-   OPENING
-========================================= */
-
-.invitation-intro.open .safari-top {
-  transform: translateY(-110%);
-
-  transition:
-    transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.invitation-intro.open .safari-bottom {
-  transform: translateY(110%);
-
-  transition:
-    transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.invitation-intro.open .safari-left,
-.invitation-intro.open .safari-right {
-  opacity: 0;
-
-  transition:
-    opacity 0.5s ease;
+  filter: drop-shadow(
+    0 -12px 14px rgba(70, 50, 40, 0.24)
+  );
 }
