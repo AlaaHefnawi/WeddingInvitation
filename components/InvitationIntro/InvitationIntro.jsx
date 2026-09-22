@@ -22,7 +22,7 @@ const InvitationIntro = ({ onFinish }) => {
         <svg
   className="envelope-svg"
   viewBox="0 0 1200 800"
-  preserveAspectRatio="none"
+  preserveAspectRatio="xMidYMid slice"
 >
   {/* =========================================
      ENVELOPE BASE
