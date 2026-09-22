@@ -443,22 +443,7 @@
 
 
 /* =========================================
-   OVERSIZED ENVELOPE CANVAS
-========================================= */
-
-.safari-envelope-canvas {
-  position: absolute;
-
-  width: 166.6667%;
-  height: 100%;
-
-  left: -33.3333%;
-  top: 0;
-}
-
-
-/* =========================================
-   ALL FLAPS
+   FLAPS
 ========================================= */
 
 .safari-left,
@@ -467,12 +452,8 @@
 .safari-bottom {
   position: absolute;
 
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: #dacbbc;
+  width: 0;
+  height: 0;
 
   z-index: 2;
 
@@ -481,16 +462,16 @@
 
 
 /* =========================================
-   LEFT FLAP
-   Exact mirror of RIGHT
+   LEFT
 ========================================= */
 
 .safari-left {
-  clip-path: polygon(
-    0 0,
-    50% 50%,
-    0 100%
-  );
+  left: 0;
+  top: 0;
+
+  border-top: 50vh solid transparent;
+  border-bottom: 50vh solid transparent;
+  border-left: 50vw solid #dacbbc;
 
   filter:
     drop-shadow(
@@ -500,15 +481,16 @@
 
 
 /* =========================================
-   RIGHT FLAP
+   RIGHT
 ========================================= */
 
 .safari-right {
-  clip-path: polygon(
-    100% 0,
-    50% 50%,
-    100% 100%
-  );
+  right: 0;
+  top: 0;
+
+  border-top: 50vh solid transparent;
+  border-bottom: 50vh solid transparent;
+  border-right: 50vw solid #dacbbc;
 
   filter:
     drop-shadow(
@@ -518,15 +500,16 @@
 
 
 /* =========================================
-   TOP FLAP
+   TOP
 ========================================= */
 
 .safari-top {
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    50% 50%
-  );
+  top: 0;
+  left: 0;
+
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 50vh solid #dacbbc;
 
   filter:
     drop-shadow(
@@ -536,15 +519,16 @@
 
 
 /* =========================================
-   BOTTOM FLAP
+   BOTTOM
 ========================================= */
 
 .safari-bottom {
-  clip-path: polygon(
-    0 100%,
-    50% 50%,
-    100% 100%
-  );
+  bottom: 0;
+  left: 0;
+
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-bottom: 50vh solid #dacbbc;
 
   filter:
     drop-shadow(
@@ -559,12 +543,14 @@
 
 .invitation-intro.open .safari-top {
   transform: translateY(-110%);
+
   transition:
     transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .invitation-intro.open .safari-bottom {
   transform: translateY(110%);
+
   transition:
     transform 1.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -573,5 +559,6 @@
 .invitation-intro.open .safari-right {
   opacity: 0;
 
-  transition: opacity 0.5s ease;
+  transition:
+    opacity 0.5s ease;
 }
